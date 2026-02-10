@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Barendo's BrightWave Solutions</title>
+</head>
+<body>
+
+<h1>Barendo's BrightWave Solutions</h1>
+<h2>Business Service Request Form</h2>
+
+<form method="post" action="#">
+
+    <!-- FIELDSET 1: PERSONAL INFORMATION -->
+    <fieldset>
+        <legend>Personal Information</legend>
+
+        <p>
+            <label for="fullname">Full Name:</label><br>
+            <input type="text" id="fullname" name="fullname"
+                   required minlength="3" maxlength="50"
+                   pattern="[A-Za-z ]+">
+        </p>
+
+        <p>
+            <label for="email">Email Address:</label><br>
+            <input type="email" id="email" name="email"
+                   required>
+        </p>
+
+        <p>
+            <label for="phone">Phone Number:</label><br>
+            <input type="tel" id="phone" name="phone"
+                   required pattern="[0-9]{10}">
+        </p>
+    </fieldset>
+
+    <!-- FIELDSET 2: COMPANY INFORMATION -->
+    <fieldset>
+        <legend>Company Information</legend>
+
+        <p>
+            <label for="company">Company Name:</label><br>
+            <input type="text" id="company" name="company"
+                   required minlength="2" maxlength="40">
+        </p>
+
+        <p>
+            <label for="website">Company Website:</label><br>
+            <input type="url" id="website" name="website"
+                   required>
+        </p>
+
+        <p>
+            <label for="size">Company Size:</label><br>
+            <select id="size" name="size" required>
+                <option value="">--Select--</option>
+                <option value="small">Small (1–10)</option>
+                <option value="medium">Medium (11–50)</option>
+                <option value="large">Large (51+)</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="industry">Industry:</label><br>
+            <input type="text" id="industry" name="industry"
+                   required minlength="3" maxlength="30">
+        </p>
+    </fieldset>
+
+    <!-- FIELDSET 3: SERVICE REQUEST -->
+    <fieldset>
+        <legend>Service Request</legend>
+
+        <p>
+            <label>Service Type:</label><br>
+            <input type="radio" id="web" name="service" value="web" required>
+            <label for="web">Web Development</label><br>
+
+            <input type="radio" id="design" name="service" value="design">
+            <label for="design">Graphic Design</label><br>
+
+            <input type="radio" id="photo" name="service" value="photo">
+            <label for="photo">Photography</label>
+        </p>
+
+        <p>
+            <label>Preferred Contact Method:</label><br>
+            <input type="checkbox" id="email_contact" name="contact[]" value="email">
+            <label for="email_contact">Email</label><br>
+
+            <input type="checkbox" id="phone_contact" name="contact[]" value="phone">
+            <label for="phone_contact">Phone</label><br>
+
+            <input type="checkbox" id="whatsapp_contact" name="contact[]" value="whatsapp">
+            <label for="whatsapp_contact">WhatsApp</label>
+        </p>
+
+        <p>
+            <label for="date">Appointment Date:</label><br>
+            <input type="date" id="date" name="date"
+                   required>
+        </p>
+
+        <p>
+            <label for="time">Appointment Time:</label><br>
+            <input type="time" id="time" name="time"
+                   required>
+        </p>
+
+        <p>
+            <label for="budget">Budget Range (KES):</label><br>
+            <input type="number" id="budget" name="budget"
+                   required min="5000" max="100000">
+        </p>
+    </fieldset>
+
+    <p>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Clear">
+    </p>
+
+</form>
+
+</body>
+</html>
